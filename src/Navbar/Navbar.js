@@ -4,22 +4,13 @@ import React, { useState, useRef } from 'react';
 
 function Navbar() {
   return (
-    <Nav>
-      <Items>
-        <Dropdown></Dropdown>
-      </Items>
-    </Nav>
+
+    <Items>
+      <Dropdown></Dropdown>
+    </Items>
+
   );
 }
-
-function Nav(props) {
-  return (
-    <nav className="navbar">
-      <ul className="navbar-nav">{props.children}</ul>
-    </nav>
-  );
-}
-
 
 // Items to be inserted inside the dropdown menu
 function Items(props) {
@@ -54,7 +45,7 @@ function Dropdown() {
   return (
     <div className="dropdown" ref={dropdownRef}>
       <div className="menu">
-        <h3 style={{ color: "white" }}>Leul Tefera</h3>
+        <h3 style={{ color: "white", fontFamily: "roboto" }}>Leul Tefera</h3>
         <DropdownItem>Dashboard</DropdownItem>
         <DropdownItem>Sign Out</DropdownItem>
       </div>
